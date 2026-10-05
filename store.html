@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse clothing, shoes, and accessories at Buy Now. Add items to your cart and pay securely with Paystack.">
+    <title>Store | Buy Now</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="JS/store.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="navbar">
+            <div class="logo">
+                <h2>Buy Now</h2>
+            </div>
+            <nav aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="store.html" aria-current="page">Store</a></li>
+                    <li><a href="#cart">My Cart <span class="cart-nav-count" data-cart-count>0</span></a></li>
+                </ul>
+            </nav>
+        </div>
+        <section class="store-hero">
+            <div>
+                <p class="store-eyebrow">The Buy Now collection</p>
+                <h1>Find something <span>you'll love.</span></h1>
+                <p>Browse everyday clothing, comfortable footwear, and useful accessories. Add your picks to the cart and pay securely online.</p>
+                <a class="button" href="#catalog">Shop all products</a>
+            </div>
+            <div class="store-hero-art" aria-hidden="true">
+                <i class="fa-solid fa-bag-shopping"></i>
+            </div>
+        </section>
+    </header>
+
+    <main class="store-page">
+        <section class="store-catalog" id="catalog" aria-labelledby="catalog-title">
+            <div class="store-section-heading">
+                <div>
+                    <p class="store-eyebrow">Made for every day</p>
+                    <h2 id="catalog-title">Shop the collection</h2>
+                </div>
+                <label class="store-search">
+                    <span class="visually-hidden">Search products</span>
+                    <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                    <input id="product-search" type="search" placeholder="Search products" autocomplete="off">
+                </label>
+            </div>
+            <div class="category-filters" role="group" aria-label="Filter products by category">
+                <button class="category-filter is-active" type="button" data-category="all" aria-pressed="true">All products</button>
+                <button class="category-filter" type="button" data-category="apparel" aria-pressed="false">Apparel</button>
+                <button class="category-filter" type="button" data-category="footwear" aria-pressed="false">Footwear</button>
+                <button class="category-filter" type="button" data-category="accessories" aria-pressed="false">Accessories</button>
+            </div>
+            <p class="store-result-count" id="store-result-count" aria-live="polite"></p>
+            <div class="store-product-grid" id="store-products"></div>
+            <p class="store-no-results" id="store-no-results" hidden>No products match that search. Try another name or category.</p>
+        </section>
+
+        <section class="cart-section" id="cart" aria-labelledby="cart-title">
+            <div class="cart-heading">
+                <div>
+                    <p class="store-eyebrow">Your selected items</p>
+                    <h2 id="cart-title">Shopping cart <span class="cart-heading-count" data-cart-count>0</span></h2>
+                </div>
+                <i class="fa-solid fa-basket-shopping" aria-hidden="true"></i>
+            </div>
+            <p class="cart-status" id="cart-status" role="status" aria-live="polite"></p>
+            <div class="cart-items" id="cart-items"></div>
+            <div class="cart-empty" id="cart-empty">
+                <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                <p>Your cart is empty. Add something you like from the collection above.</p>
+            </div>
+            <div class="cart-summary">
+                <p>Subtotal <strong id="cart-subtotal">GH₵0.00</strong></p>
+            </div>
+            <form class="checkout-form" id="checkout-form">
+                <h3>Checkout details</h3>
+                <p class="checkout-intro">Enter your contact and delivery details, then continue to Paystack for secure card or mobile money payment.</p>
+                <div class="checkout-fields">
+                    <label>Full name
+                        <input id="customer-name" name="name" type="text" autocomplete="name" maxlength="100" required>
+                    </label>
+                    <label>Email address
+                        <input id="customer-email" name="email" type="email" autocomplete="email" maxlength="254" required>
+                    </label>
+                    <label>Phone number
+                        <input id="customer-phone" name="phone" type="tel" autocomplete="tel" maxlength="30" required>
+                    </label>
+                </div>
+                <fieldset class="delivery-options">
+                    <legend>How would you like to receive your order?</legend>
+                    <label>
+                        <input type="radio" name="delivery-method" value="delivery" checked>
+                        <span><i class="fa-solid fa-truck" aria-hidden="true"></i> Home delivery</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="delivery-method" value="pickup">
+                        <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Pick up from a point</span>
+                    </label>
+                </fieldset>
+                <div class="checkout-fields delivery-location-fields">
+                    <label>Region
+                        <input id="delivery-region" name="region" type="text" autocomplete="address-level1" maxlength="80" placeholder="e.g. Greater Accra" required>
+                    </label>
+                    <label>City or town
+                        <input id="delivery-town" name="town" type="text" autocomplete="address-level2" maxlength="80" placeholder="e.g. Accra" required>
+                    </label>
+                    <label class="delivery-address-field">Delivery address
+                        <textarea id="delivery-address" name="address" autocomplete="street-address" maxlength="250" placeholder="House number, street, area" required></textarea>
+                    </label>
+                    <label class="pickup-point-field" hidden>Preferred pickup point
+                        <input id="pickup-point" name="pickupPoint" type="text" maxlength="160" placeholder="Enter a convenient area or landmark" disabled>
+                    </label>
+                    <label>Nearby landmark <span class="field-optional">(optional)</span>
+                        <input id="delivery-landmark" name="landmark" type="text" maxlength="150" placeholder="A nearby shop, school, or landmark">
+                    </label>
+                    <label class="delivery-instructions-field">Delivery instructions <span class="field-optional">(optional)</span>
+                        <textarea id="delivery-instructions" name="instructions" maxlength="500" placeholder="Any helpful details for delivery or collection"></textarea>
+                    </label>
+                </div>
+                <p class="delivery-fee-note">Delivery or pickup charges, if applicable, will be confirmed with you before fulfilment; they are not included in the amount paid online.</p>
+                <p class="payment-message" id="payment-message" role="status" aria-live="polite"></p>
+                <button class="button cart-checkout" id="pay-button" type="submit" disabled>
+                    <i class="fa-solid fa-lock" aria-hidden="true"></i> Pay securely with Paystack
+                </button>
+                <p class="cart-note">Your payment details are entered securely on Paystack. We only receive your order details after payment is confirmed.</p>
+            </form>
+        </section>
+    </main>
+
+    <a class="floating-cart" href="#cart" aria-label="View cart, 0 items" aria-controls="cart">
+        <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+        <span class="floating-cart-count" data-cart-count>0</span>
+        <span class="visually-hidden">View cart</span>
+    </a>
+
+    <footer class="footer">
+        <div class="app row">
+            <h2>Download Our App</h2>
+            <p>Shop on the go and keep up with the latest deals. Available for Android and iOS.</p>
+            <div class="download">
+                <img src="IMAGES/play-store.png" alt="Get Buy Now on Google Play">
+                <img src="IMAGES/app-store.png" alt="Download Buy Now on the App Store">
+            </div>
+        </div>
+        <div class="company row">
+            <h2>Buy Now</h2>
+            <p>Quality everyday essentials, thoughtfully selected to make shopping simple.</p>
+        </div>
+        <div class="links row">
+            <h3>Useful Links</h3>
+            <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li>Return Policy</li>
+                <li>Customer Care</li>
+                <li>Join Affiliate</li>
+            </ul>
+        </div>
+        <div class="social row">
+            <h3>Follow Us</h3>
+            <ul>
+                <li>Facebook</li>
+                <li>Twitter</li>
+                <li>Instagram</li>
+                <li>Youtube</li>
+            </ul>
+        </div>
+        <div class="contact row">
+            <h3>Contact Us</h3>
+            <ul>
+                <li><a href="https://wa.me/233533874270"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> WhatsApp: 053 387 4270</a></li>
+                <li><a href="mailto:mensahrobert892@gmail.com"><i class="fa-regular fa-envelope" aria-hidden="true"></i> mensahrobert892@gmail.com</a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Buy Now. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

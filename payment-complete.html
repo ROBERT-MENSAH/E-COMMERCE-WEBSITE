@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment status | Buy Now</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="JS/payment-complete.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="navbar">
+            <div class="logo">
+                <h2>Buy Now</h2>
+            </div>
+            <nav aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="store.html">Store</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="payment-result">
+        <div class="payment-result-icon" id="payment-result-icon" aria-hidden="true">
+            <i class="fa-solid fa-spinner fa-spin"></i>
+        </div>
+        <p class="store-eyebrow">Secure checkout</p>
+        <h1 id="payment-result-title">Checking your payment...</h1>
+        <p id="payment-result-message" role="status" aria-live="polite">Please wait while Paystack confirms the transaction.</p>
+        <p class="payment-reference" id="payment-reference"></p>
+        <div class="payment-delivery" id="payment-delivery" hidden></div>
+        <a class="button" href="store.html">Return to the store</a>
+    </main>
+</body>
+</html>

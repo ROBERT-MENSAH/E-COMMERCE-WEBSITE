@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shop everyday clothing, comfortable shoes, and useful accessories at Buy Now.">
+    <title>Buy Now | Everyday Style, Made Easy</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="header">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html" aria-label="Buy Now home"><span>Buy Now</span></a>
+            </div>
+            <nav aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html" aria-current="page">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="store.html">Store</a></li>
+                    <li><a href="store.html#cart">My Cart</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="main home-hero">
+            <div class="column">
+                <p class="home-eyebrow">Everyday finds, made easy</p>
+                <h1>Add some <span>style</span> to your life.</h1>
+                <p>Discover comfortable clothing, footwear, and accessories for your everyday routine. Find a new favorite and shop the collection with ease.</p>
+                <div class="hero-actions">
+                    <a class="button" href="store.html">Explore products</a>
+                    <a class="text-link" href="#categories">Browse categories <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="column">
+                <img src="IMAGES/header-image.png" alt="Featured Buy Now clothing and accessories">
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+    <section class="categories" id="categories" aria-labelledby="categories-title">
+        <div class="home-section-heading">
+            <p class="home-eyebrow">Find your next favorite</p>
+            <h2 id="categories-title">Shop by category</h2>
+            <p>Start with what you need and discover styles for every day.</p>
+        </div>
+        <div class="category-grid">
+            <a class="category-card" href="store.html?category=accessories">
+                <img src="IMAGES/category-1.jpg" alt="Watches and everyday accessories" loading="lazy">
+                <span class="category-card-copy"><span>Up to 20% off</span><strong>Watches</strong><span class="category-card-link">Shop accessories <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span></span>
+            </a>
+            <a class="category-card" href="store.html?category=footwear">
+                <img src="IMAGES/category-2.jpg" alt="Shoes for everyday wear" loading="lazy">
+                <span class="category-card-copy"><span>Up to 15% off</span><strong>Shoes</strong><span class="category-card-link">Shop footwear <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span></span>
+            </a>
+            <a class="category-card" href="store.html?category=apparel">
+                <img src="IMAGES/category-3.jpg" alt="T-shirts and hoodies for casual style" loading="lazy">
+                <span class="category-card-copy"><span>Up to 25% off</span><strong>T-shirts &amp; hoodies</strong><span class="category-card-link">Shop apparel <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span></span>
+            </a>
+        </div>
+    </section>
+
+    <section class="products home-products" id="products" aria-labelledby="featured-title">
+        <div class="home-section-heading">
+            <p class="home-eyebrow">Picked for you</p>
+            <h2 id="featured-title">Featured products</h2>
+            <p>Everyday favorites selected for comfort, quality, and easy styling.</p>
+        </div>
+        <div class="row">
+            <div class="product">
+                <img src="IMAGES/product-1.jpg" alt="Red printed T-shirt"/>
+                <h3>Red Printed T-shirt</h3>
+                <p class="description">A bold everyday essential featuring a vibrant red print, lightweight fabric, and a relaxed fit that keeps you comfortable all day.</p>
+                <div class="rating" role="img" aria-label="Rated 4.5 out of 5 stars">
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star-half-stroke" aria-hidden="true"></i>
+                </div>
+                <p>GH₵49.00</p>
+            </div>
+            <div class="product">
+                <img src="IMAGES/product-2.jpg" alt="Running shoes"/>
+                <h3>Performance Running Shoe</h3>
+                <p class="description">Engineered for speed and comfort, this lightweight runner combines cushioned support, breathable mesh, and durable traction for daily movement.</p>
+                <div class="rating" role="img" aria-label="Rated 4.5 out of 5 stars">
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star-half-stroke" aria-hidden="true"></i>
+                </div>
+                <p>GH₵89.00</p>
+            </div>
+            <div class="product">
+                <img src="IMAGES/product-3.jpg" alt="Gray jogger pants"/>
+                <h3>Men's Grey Utility Joggers</h3>
+                <p class="description">Comfort-fit joggers designed for everyday wear with a relaxed silhouette, soft textured fabric, and secure zip pocket details.</p>
+                <div class="rating" role="img" aria-label="Rated 4.5 out of 5 stars">
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star-half-stroke" aria-hidden="true"></i>
+                </div>
+                <p>GH₵59.00</p>
+            </div>
+            <div class="product">
+                <img src="IMAGES/product-4.jpg" alt="Navy blue men's polo shirt"/>
+                <h3>Men's Navy Polo Shirt</h3>
+                <p class="description">A versatile navy polo with a classic collar, short sleeves, and a comfortable fit for smart-casual everyday style.</p>
+                <div class="rating" role="img" aria-label="Rated 4.5 out of 5 stars">
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star-half-stroke" aria-hidden="true"></i>
+                </div>
+                <p>GH₵55.00</p>
+            </div>
+        </div>
+        <div class="home-products-cta">
+            <a class="button" href="store.html">Shop all products</a>
+        </div>
+    </section>
+
+    <section class="products home-products deals" id="deals" aria-labelledby="deals-title">
+        <div class="home-section-heading">
+            <p class="home-eyebrow">Good finds, great prices</p>
+            <h2 id="deals-title">Today's deals</h2>
+            <p>Save on customer favorites while these offers last.</p>
+        </div>
+        <div class="row">
+            <div class="product">
+                <img src="IMAGES/product-5.jpg" alt="Black graphic T-shirt"/>
+                <h3>Black Graphic T-shirt</h3>
+                <p class="description">A casual black T-shirt with a bold graphic design, made for comfortable everyday wear.</p>
+                <div class="rating" role="img" aria-label="Rated 4.5 out of 5 stars">
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star-half-stroke" aria-hidden="true"></i>
+                </div>
+                <p><del>GH₵45.00</del> GH₵34.00</p>
+            </div>
+            <div class="product">
+                <img src="IMAGES/product-6.jpg" alt="Light gray high-top sneakers"/>
+                <h3>Light Gray High-Top Sneakers</h3>
+                <p class="description">Lightweight high-top sneakers with a breathable knit finish and a comfortable everyday sole.</p>
+                <div class="rating" role="img" aria-label="Rated 4.5 out of 5 stars">
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star-half-stroke" aria-hidden="true"></i>
+                </div>
+                <p><del>GH₵95.00</del> GH₵74.00</p>
+            </div>
+            <div class="product">
+                <img src="IMAGES/product-7.jpg" alt="Three-pack of black, white, and gray socks"/>
+                <h3>Everyday Crew Socks - 3 Pack</h3>
+                <p class="description">A versatile three-pack of crew socks in black, white, and gray for everyday comfort.</p>
+                <div class="rating" role="img" aria-label="Rated 4.5 out of 5 stars">
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star-half-stroke" aria-hidden="true"></i>
+                </div>
+                <p><del>GH₵24.00</del> GH₵18.00</p>
+            </div>
+            <div class="product">
+                <img src="IMAGES/product-8.jpg" alt="Black Fossil wristwatch"/>
+                <h3>Black Stainless-Steel Watch</h3>
+                <p class="description">A sleek black wristwatch with a matching metal bracelet and a clean, minimalist dial.</p>
+                <div class="rating" role="img" aria-label="Rated 4.5 out of 5 stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <p><del>GH₵120.00</del> GH₵89.00</p>
+            </div>
+            <div class="product">
+                <img src="IMAGES/product-9.jpg" alt="Black watch with a yellow-accented dial"/>
+                <h3>Black Leather-Strap Watch</h3>
+                <p class="description">A bold black watch with a textured strap and sporty dial details accented in yellow.</p>
+                <div class="rating" role="img" aria-label="Rated 4.5 out of 5 stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <p><del>GH₵85.00</del> GH₵64.00</p>
+            </div>
+            <div class="product">
+                <img src="IMAGES/product-10.jpg" alt="Black and red athletic sneakers"/>
+                <h3>Black and Red Athletic Sneakers</h3>
+                <p class="description">Sporty sneakers with a breathable upper, striking red accents, and a rugged sole for everyday movement.</p>
+                <div class="rating" role="img" aria-label="Rated 4.5 out of 5 stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <p><del>GH₵90.00</del> GH₵69.00</p>
+            </div>
+            <div class="product">
+                <img src="IMAGES/product-11.jpg" alt="Black men's jogger pants"/>
+                <h3>Black Men's Jogger Pants</h3>
+                <p class="description">Comfortable black joggers with an elastic waist and tapered cuffs, ideal for relaxing or staying active.</p>
+                <div class="rating" role="img" aria-label="Rated 4.5 out of 5 stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <p><del>GH₵65.00</del> GH₵49.00</p>
+            </div>
+            <div class="product">
+                <img src="IMAGES/product-12.jpg" alt="Gray slip-on sneakers"/>
+                <h3>Gray Knit Slip-On Sneakers</h3>
+                <p class="description">Easy-on knit sneakers with a flexible fit, breathable mesh, and lightweight cushioned soles.</p>
+                <div class="rating" role="img" aria-label="Rated 4.5 out of 5 stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <p><del>GH₵75.00</del> GH₵56.00</p>
+            </div>
+        </div>
+        <div class="home-products-cta">
+            <a class="button" href="store.html">See all deals and products</a>
+        </div>
+    </section>
+    <section class="offer" id="featured-offer" aria-labelledby="offer-title">
+        <div class="offer-container">
+            <div class="offer-image">
+                <img src="IMAGES/offer.png" alt="Buy Now Smart Band 2 fitness tracker">
+            </div>
+            <div class="offer-details">
+                <p class="home-eyebrow">Exclusively available at Buy Now</p>
+                <h2 id="offer-title">Smart Band 2</h2>
+                <small>
+                    Enjoy a vibrant AMOLED touchscreen with adjustable brightness, designed to keep your everyday activity in view.
+                </small>
+                <a class="button" href="store.html">Explore the collection</a>
+            </div>
+        </div>
+    </section>
+    <section class="reviews" id="reviews" aria-labelledby="reviews-title">
+        <div class="home-section-heading">
+            <p class="home-eyebrow">Kind words from shoppers</p>
+            <h2 id="reviews-title">What our customers say</h2>
+        </div>
+        <div class="row">
+            <div class="review">
+                <i class="fa-solid fa-quote-left" aria-hidden="true"></i>
+                <p>The red T-shirt fits just right and feels soft even after a full day of wear. It arrived quickly and looks exactly like the photos.</p>
+                <div class="rating" role="img" aria-label="Rated 5 out of 5 stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <img src="IMAGES/user-1.png" alt="Customer Alex Morgan">
+                <h3>Alex Morgan</h3>
+            </div>
+            <div class="review">
+                <i class="fa-solid fa-quote-left" aria-hidden="true"></i>
+                <p>These running shoes are light, supportive, and comfortable on my daily walks. The sizing was accurate, and the grip feels dependable.</p>
+                <div class="rating" role="img" aria-label="Rated 5 out of 5 stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <img src="IMAGES/user-2.png" alt="Customer Jamie Lee">
+                <h3>Jamie Lee</h3>
+            </div>
+            <div class="review">
+                <i class="fa-solid fa-quote-left" aria-hidden="true"></i>
+                <p>I bought the black stainless-steel watch as an everyday accessory. It has a clean design, feels sturdy, and pairs easily with casual or work outfits.</p>
+                <div class="rating" role="img" aria-label="Rated 5 out of 5 stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <img src="IMAGES/user-3.png" alt="Customer Taylor Brooks">
+                <h3>Taylor Brooks</h3>
+            </div>
+        </div>
+    </section>
+    </main>
+    <footer class="footer">
+        <div class="app row">
+            <h2>Download Our App</h2>
+            <p>Shop on the go and keep up with the latest deals. Available for Android and iOS.</p>
+            <div class="download">
+                <img src="IMAGES/play-store.png" alt="Get Buy Now on Google Play">
+                <img src="IMAGES/app-store.png" alt="Download Buy Now on the App Store">
+            </div>
+        </div>
+        <div class="company row">
+            <h2>Buy Now</h2>
+            <p>Quality everyday essentials, thoughtfully selected to make shopping simple.</p>
+        </div>
+        <div class="links row">
+            <h3>Useful Links</h3>
+            <ul>
+                <li><a href="about.html">About Buy Now</a></li>
+                <li><a href="store.html">Shop products</a></li>
+                <li><a href="store.html#cart">Shopping cart</a></li>
+                <li><a href="#contact">Customer care</a></li>
+            </ul>
+        </div>
+        <div class="social row">
+            <h3>Follow Us</h3>
+            <ul>
+                <li>Facebook</li>
+                <li>Twitter</li>
+                <li>Instagram</li>
+                <li>Youtube</li>
+            </ul>
+        </div>
+        <div class="contact row">
+            <h3 id="contact">Contact Us</h3>
+            <ul>
+                <li><a href="https://wa.me/233533874270" aria-label="Chat with Buy Now on WhatsApp at 053 387 4270"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> WhatsApp: 053 387 4270</a></li>
+                <li><a href="mailto:mensahrobert892@gmail.com"><i class="fa-regular fa-envelope" aria-hidden="true"></i> mensahrobert892@gmail.com</a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Buy Now. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
