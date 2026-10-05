@@ -1,6 +1,5 @@
-.vercel/
+.vercel
 node_modules/
 coverage/
-.env
-.env.*
+.env*
 !.env.example
