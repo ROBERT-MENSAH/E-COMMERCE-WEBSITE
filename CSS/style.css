@@ -1811,6 +1811,86 @@ button:focus-visible{
     margin-top: 5px;
 }
 
+.navbar nav .nav-menu{
+    position: relative;
+}
+.navbar nav .nav-menu > summary{
+    display: none;
+    cursor: pointer;
+    list-style: none;
+}
+.navbar nav .nav-menu > summary::-webkit-details-marker{
+    display: none;
+}
+.navbar nav .nav-menu > ul{
+    display: flex;
+    align-items: center;
+    gap: 6px 14px;
+    margin: 0;
+}
+.navbar nav .nav-menu > ul > li{
+    margin: 0;
+}
+
+@media (max-width: 768px){
+    .header .navbar{
+        flex-direction: row;
+        gap: 12px;
+    }
+    .navbar nav .nav-menu > summary{
+        display: flex;
+        width: 46px;
+        height: 46px;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #d1d5db;
+        border-radius: 8px;
+        background: #fff;
+    }
+    .navbar nav .nav-menu > summary:focus-visible{
+        outline: 3px solid #2474b5;
+        outline-offset: 3px;
+    }
+    .navbar nav .nav-menu > summary img{
+        display: block;
+        width: 25px;
+        height: 25px;
+        object-fit: contain;
+    }
+    .navbar nav .nav-menu > ul{
+        position: absolute;
+        z-index: 1000;
+        top: calc(100% + 8px);
+        right: 0;
+        display: none;
+        width: min(260px, calc(100vw - 36px));
+        align-items: stretch;
+        flex-direction: column;
+        gap: 4px;
+        padding: 8px;
+        border: 1px solid #e5e7eb;
+        border-radius: 10px;
+        background: #fff;
+        box-shadow: 0 10px 28px rgba(31, 41, 55, 0.18);
+    }
+    .navbar nav .nav-menu[open] > ul{
+        display: flex;
+    }
+    .navbar nav .nav-menu > ul > li{
+        font-size: 16px;
+    }
+    .navbar nav .nav-menu > ul > li > a{
+        display: block;
+        padding: 10px 12px;
+        border: 0;
+        border-radius: 6px;
+    }
+    .navbar nav .nav-menu > ul > li > a:hover,
+    .navbar nav .nav-menu > ul > li > a[aria-current="page"]{
+        background: #f3f8fc;
+    }
+}
+
 @media (max-width: 600px){
     .payment-result{
         margin: 40px auto;
